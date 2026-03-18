@@ -1,148 +1,525 @@
 <!DOCTYPE html>
 <html lang="ko">
   <head>
-    <meta charset="UTF-8" />
+    <meta charset="utf-8" />
     <meta name="viewport" content="initial-scale=1, width=device-width" />
-
-    <!-- TODO: Open Graph 메타 태그를 설정하세요 -->
-    <!-- <meta property="og:title" content="페이지 제목" /> -->
-    <!-- <meta property="og:description" content="페이지 설명" /> -->
-    <!-- <meta property="og:image" content="./images/thumbnail.jpg" /> -->
-
-    <title>Today I Learn</title>
+    <meta property="og:title" content="스타크 | 배우고 기록하는 소개 페이지" />
+    <meta
+      property="og:description"
+      content="프로필, 기본 정보, 갤러리, 향수, 플레이리스트, 인생 작품, TIL을 담은 개인 홈페이지입니다."
+    />
+    <meta property="og:image" content="./images/Profile_8th_1.png" />
+    <meta property="og:type" content="website" />
+    <title>스타크 | Personal TIL Homepage</title>
     <link rel="stylesheet" href="./css/main.css" />
     <script src="./js/index.js" defer></script>
   </head>
   <body>
-    <!-- 상단 내비게이션 -->
-    <nav class="top-nav">
-      <span class="nav-logo">My Page</span>
-      <ul class="nav-links">
-        <li><a href="#about">자기소개</a></li>
-        <li><a href="#gallery">갤러리</a></li>
-        <li><a href="#works">인생 작품</a></li>
-        <li><a href="#til">TIL</a></li>
-      </ul>
-    </nav>
+    <header class="site-header" id="top">
+      <nav class="top-nav" aria-label="상단 내비게이션">
+        <a class="nav-logo nickname-mark" href="#top">스타크</a>
+        <ul class="nav-links">
+          <li><a href="#profile">프로필</a></li>
+          <li><a href="#info">기본 정보</a></li>
+          <li><a href="#intro">자기소개</a></li>
+          <li><a href="#gallery">갤러리</a></li>
+          <li><a href="#perfume">향수</a></li>
+          <li><a href="#playlist">플레이리스트</a></li>
+          <li><a href="#works">인생 작품</a></li>
+          <li><a href="#til">TIL</a></li>
+        </ul>
+      </nav>
+    </header>
 
-    <!-- 프로필 히어로 -->
-    <section class="hero" id="about">
-      <div class="profile-card">
-        <div class="profile-image">
-          <!-- TODO: 프로필 이미지를 넣어주세요 -->
-          <!-- <img src="./images/profile.jpg" alt="프로필 사진" /> -->
-        </div>
-        <div class="profile-info">
-          <h1>닉네임</h1>
-          <p class="tagline">한 줄 소개를 작성해주세요.</p>
-        </div>
-      </div>
-    </section>
-
-    <main>
-      <!-- 자기소개 -->
-      <section class="content-section">
-        <h2>자기소개</h2>
-        <p>자기소개를 작성해주세요.</p>
-        <!-- TODO: 소개 글 안에 블로그, GitHub 등 관련 링크를 <a> 태그로 연결하세요 -->
-      </section>
-
-      <!-- 기본 정보 -->
-      <section class="content-section" id="info">
-        <h2>기본 정보</h2>
-        <!-- TODO: 자신의 기본 정보를 표(<table>)로 정리하세요 -->
-        <table class="info-table">
-          <tr>
-            <th>이름</th>
-            <td></td>
-          </tr>
-          <tr>
-            <th>MBTI</th>
-            <td></td>
-          </tr>
-          <tr>
-            <th>취미</th>
-            <td></td>
-          </tr>
-          <tr>
-            <th>좋아하는 음식</th>
-            <td></td>
-          </tr>
-        </table>
-      </section>
-
-      <!-- 나만의 갤러리 -->
-      <section class="content-section" id="gallery">
-        <h2>나만의 갤러리</h2>
-        <p class="section-desc">갤러리 부제를 작성해주세요. (예: 기억에 남는 여행지)</p>
-        <div class="gallery-grid">
-          <!-- TODO: 9장의 이미지를 배치하세요 -->
-          <!--
-          <img src="./images/gallery-1.jpg" alt="갤러리 이미지 1" />
-          <img src="./images/gallery-2.jpg" alt="갤러리 이미지 2" />
-          ...
-          -->
-        </div>
-      </section>
-
-      <!-- 나를 울린 인생 작품 -->
-      <section class="content-section" id="works">
-        <h2>나를 울린 인생 작품</h2>
-        <div class="works-list">
-          <!-- TODO: 최소 2가지 작품을 소개하세요 -->
-          <!-- TODO: 작품 중 하나는 <video> 또는 <iframe>으로 영상을 삽입하세요 -->
-          <article class="work-card">
-            <div class="work-thumbnail">
-              <!-- 작품 이미지 -->
+    <main class="story-main">
+      <section class="floating-stage floating-stage-hero" id="profile" aria-labelledby="profile-title">
+        <div class="section-block floating-card hero">
+          <div class="hero-copy reveal-item">
+            <div class="hero-copy-main">
+              <p class="eyebrow">Personal Homepage</p>
+              <h1 id="profile-title">영화 속 히어로가 <br />되고 싶었던 사람</h1>
+              <p class="hero-description">
+                아이언맨을 보며 꿈을 키우고, 스파이더맨을 보며 인생을 배웠습니다. <br /> 좋아하는 영화와 향수, 노래,
+                그리고 오늘 배운 것들이 이 페이지에 담겨 있습니다.
+              </p>
+              <div class="link-chips">
+                <a class="link-chip" href="https://github.com/MODUGGAGI" target="_blank" rel="noopener noreferrer">
+                  <svg viewBox="0 0 24 24" aria-hidden="true">
+                    <path
+                      d="M12 2C6.48 2 2 6.58 2 12.24c0 4.53 2.87 8.37 6.84 9.73.5.1.68-.22.68-.49 0-.24-.01-1.04-.01-1.89-2.78.62-3.37-1.21-3.37-1.21-.46-1.19-1.11-1.51-1.11-1.51-.91-.64.07-.63.07-.63 1 .08 1.53 1.06 1.53 1.06.9 1.58 2.35 1.12 2.92.86.09-.67.35-1.12.64-1.38-2.22-.26-4.56-1.15-4.56-5.11 0-1.13.39-2.05 1.03-2.77-.1-.26-.45-1.31.1-2.74 0 0 .84-.28 2.75 1.06A9.27 9.27 0 0 1 12 6.84c.85 0 1.71.12 2.51.36 1.9-1.34 2.74-1.06 2.74-1.06.55 1.43.2 2.48.1 2.74.64.72 1.03 1.64 1.03 2.77 0 3.97-2.34 4.84-4.57 5.1.36.32.68.94.68 1.91 0 1.38-.01 2.5-.01 2.84 0 .27.18.59.69.49A10.28 10.28 0 0 0 22 12.24C22 6.58 17.52 2 12 2Z"
+                    ></path>
+                  </svg>
+                  <span>GitHub</span>
+                </a>
+              </div>
             </div>
-            <div class="work-info">
-              <h3>작품 제목</h3>
-              <p>작품에 대한 설명을 작성해주세요.</p>
+            <figure class="hero-mascot">
+              <img src="./images/TONY_STARK.gif" alt="픽셀 스타일의 토니 스타크 움짤" />
+            </figure>
+          </div>
+
+          <article class="profile-card reveal-item">
+            <div class="profile-image-wrap">
+              <img class="profile-image" src="./images/Profile_8th_1.png" alt="스타크의 프로필 사진" />
+            </div>
+            <div class="profile-meta">
+              <p class="profile-label">Nickname</p>
+              <h2 class="nickname-mark">스타크</h2>
+              <p class="tagline">영화와 음악, 향으로 하루를 채우며 기록하는 사람</p>
             </div>
           </article>
         </div>
       </section>
 
-      <!-- TIL (Today I Learned) -->
-      <section class="content-section" id="til">
-        <h2>TIL</h2>
-        <p class="section-desc">오늘 새롭게 배운 것들을 기록합니다.</p>
+      <section class="floating-stage floating-stage-static" id="info" aria-labelledby="info-title">
+        <div class="section-block floating-card">
+          <div class="section-head reveal-item">
+            <div>
+              <p class="section-kicker">Basic Info</p>
+              <h2 class="section-title" id="info-title">기본 정보</h2>
+            </div>
+          </div>
 
-        <!-- TIL 작성 폼 -->
-        <form class="til-form" id="til-form">
-          <div class="form-group">
-            <label for="til-date">날짜</label>
-            <input type="date" id="til-date" name="date" required />
-          </div>
-          <div class="form-group">
-            <label for="til-title">제목</label>
-            <input type="text" id="til-title" name="title" placeholder="학습 주제를 입력하세요" required />
-          </div>
-          <div class="form-group">
-            <label for="til-content">내용</label>
-            <textarea id="til-content" name="content" placeholder="오늘 배운 내용을 정리해주세요" required></textarea>
-          </div>
-          <div class="form-actions">
-            <button type="submit">등록</button>
-            <button type="reset">초기화</button>
-          </div>
-        </form>
+          <table class="info-table reveal-item">
+            <caption class="sr-only">기본 정보 표</caption>
+            <tbody>
+              <tr>
+                <th scope="row">닉네임</th>
+                <td>스타크</td>
+              </tr>
+              <tr>
+                <th scope="row">MBTI</th>
+                <td>INTJ</td>
+              </tr>
+              <tr>
+                <th scope="row">취미</th>
+                <td>영화관 가서 영화 보기, 노래 듣기, 향수 모으기, 시향하기</td>
+              </tr>
+              <tr>
+                <th scope="row">좋아하는 음식</th>
+                <td>돈까스, 햄버거, 고기</td>
+              </tr>
+              <tr>
+                <th scope="row">요즘 관심사</th>
+                <td>객체 지향, 우테코, 아이언맨, 향수, 헤드폰</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
 
-        <!-- TIL 목록: 폼으로 등록하면 여기에 항목이 추가됩니다 -->
-        <div class="til-list" id="til-list">
-          <!-- 아래는 예시 항목입니다. 자유롭게 수정하거나 삭제하세요 -->
-          <article class="til-item">
-            <time>2026-03-15</time>
-            <h3>HTML 시멘틱 태그</h3>
-            <p>header, nav, main, section, article, footer 등 시멘틱 태그의 역할과 사용법을 배웠다.</p>
+      <section class="floating-stage floating-stage-static" id="intro" aria-labelledby="intro-title">
+        <div class="section-block floating-card">
+          <div class="section-head reveal-item">
+            <div>
+              <p class="section-kicker">About Me</p>
+              <h2 class="section-title" id="intro-title">자기소개</h2>
+            </div>
+          </div>
+
+          <div class="intro-copy reveal-item">
+            <p>
+              영화를 정말 좋아해서 영화관 아르바이트도 오랫동안 했습니다. 새로운 영화를 누구보다 빨리 보고,
+              극장 특유의 분위기 안에서 하루를 보내는 시간이 저한테는 꽤 특별했습니다. 그래서 지금도 영화를
+              보는 일은 단순한 취미라기보다 저를 가장 잘 설명해 주는 감각에 가깝습니다.
+            </p>
+            <p>
+              인생 영화는 아이언맨입니다. 초등학교 1학년 때 처음 아이언맨 1이 개봉했고, 고등학교를 졸업할 즈음
+              아이언맨이 마지막을 맞이해서 제 학창 시절을 함께 지나온 인물처럼 느껴졌습니다. 그래서 더 애틋한
+              마음이 남아 있습니다. <br/> 어메이징 스파이더맨 영화도 정말 좋아하는데, 그 시작에는 배우 앤드류 가필드를
+              좋아하게 된 이유가 큽니다.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <section class="floating-stage floating-stage-static" id="gallery" aria-labelledby="gallery-title">
+        <div class="section-block floating-card">
+          <div class="section-head reveal-item">
+            <div>
+              <p class="section-kicker">My Gallery</p>
+              <h2 class="section-title" id="gallery-title">나만의 갤러리</h2>
+            </div>
+            <p class="section-desc">오래 남겨 두고 싶은 장면들을 9장의 사진으로 모아 둔 작은 기록입니다.</p>
+          </div>
+
+          <div class="gallery-grid">
+            <figure class="gallery-card reveal-item">
+              <button
+                class="gallery-trigger"
+                type="button"
+                data-gallery-src="./images/gallery/KakaoTalk_Photo_2026-03-18-22-21-09.jpeg"
+                data-gallery-alt="나만의 갤러리 사진 1"
+                data-gallery-caption="롤체 마스터 승급 인증샷"
+                aria-label="갤러리 사진 1 크게 보기"
+              >
+                <img
+                  src="./images/gallery/KakaoTalk_Photo_2026-03-18-22-21-09.jpeg"
+                  alt="나만의 갤러리 사진 1"
+                  loading="lazy"
+                />
+              </button>
+            </figure>
+            <figure class="gallery-card reveal-item">
+              <button
+                class="gallery-trigger"
+                type="button"
+                data-gallery-src="./images/gallery/KakaoTalk_Photo_2026-03-18-22-03-46.jpeg"
+                data-gallery-alt="나만의 갤러리 사진 2"
+                data-gallery-caption="일본 여행 가서 리락쿠마 님께...ㅎ"
+                aria-label="갤러리 사진 2 크게 보기"
+              >
+                <img
+                  src="./images/gallery/KakaoTalk_Photo_2026-03-18-22-03-46.jpeg"
+                  alt="나만의 갤러리 사진 2"
+                  loading="lazy"
+                />
+              </button>
+            </figure>
+            <figure class="gallery-card reveal-item">
+              <button
+                class="gallery-trigger"
+                type="button"
+                data-gallery-src="./images/gallery/IMG_4480.jpg"
+                data-gallery-alt="나만의 갤러리 사진 3"
+                data-gallery-caption="뉴욕 가서 찍은 사진!!"
+                aria-label="갤러리 사진 3 크게 보기"
+              >
+                <img src="./images/gallery/IMG_4480.jpg" alt="나만의 갤러리 사진 3" loading="lazy" />
+              </button>
+            </figure>
+            <figure class="gallery-card reveal-item">
+              <button
+                class="gallery-trigger"
+                type="button"
+                data-gallery-src="./images/gallery/FullSizeRender.jpg"
+                data-gallery-alt="나만의 갤러리 사진 4"
+                data-gallery-caption="뉴욕 가서 찍은 레전드 사진"
+                aria-label="갤러리 사진 4 크게 보기"
+              >
+                <img src="./images/gallery/FullSizeRender.jpg" alt="나만의 갤러리 사진 4" loading="lazy" />
+              </button>
+            </figure>
+            <figure class="gallery-card reveal-item">
+              <button
+                class="gallery-trigger"
+                type="button"
+                data-gallery-src="./images/gallery/KakaoTalk_Photo_2026-03-18-22-21-02.jpeg"
+                data-gallery-alt="나만의 갤러리 사진 5"
+                data-gallery-caption="실물로 본 공유 사진"
+                aria-label="갤러리 사진 5 크게 보기"
+              >
+                <img
+                  src="./images/gallery/KakaoTalk_Photo_2026-03-18-22-21-02.jpeg"
+                  alt="나만의 갤러리 사진 5"
+                  loading="lazy"
+                />
+              </button>
+            </figure>
+            <figure class="gallery-card reveal-item">
+              <button
+                class="gallery-trigger"
+                type="button"
+                data-gallery-src="./images/gallery/IMG_4439.jpg"
+                data-gallery-alt="나만의 갤러리 사진 6"
+                data-gallery-caption="뉴욕 가서 찍은 엠파이어 스테이트 빌딩"
+                aria-label="갤러리 사진 6 크게 보기"
+              >
+                <img src="./images/gallery/IMG_4439.jpg" alt="나만의 갤러리 사진 6" loading="lazy" />
+              </button>
+            </figure>
+            <figure class="gallery-card reveal-item">
+              <button
+                class="gallery-trigger"
+                type="button"
+                data-gallery-src="./images/gallery/KakaoTalk_Photo_2026-03-18-22-03-39.jpeg"
+                data-gallery-alt="나만의 갤러리 사진 7"
+                data-gallery-caption="홍콩가서 찍은 나"
+                aria-label="갤러리 사진 7 크게 보기"
+              >
+                <img
+                  src="./images/gallery/KakaoTalk_Photo_2026-03-18-22-03-39.jpeg"
+                  alt="나만의 갤러리 사진 7"
+                  loading="lazy"
+                />
+              </button>
+            </figure>
+            <figure class="gallery-card reveal-item">
+              <button
+                class="gallery-trigger"
+                type="button"
+                data-gallery-src="./images/gallery/IMG_6716.jpg"
+                data-gallery-alt="나만의 갤러리 사진 8"
+                data-gallery-caption="타임 스퀘어에서 날다"
+                aria-label="갤러리 사진 8 크게 보기"
+              >
+                <img src="./images/gallery/IMG_6716.jpg" alt="나만의 갤러리 사진 8" loading="lazy" />
+              </button>
+            </figure>
+            <figure class="gallery-card reveal-item">
+              <button
+                class="gallery-trigger"
+                type="button"
+                data-gallery-src="./images/gallery/KakaoTalk_Photo_2026-03-18-22-21-06.jpeg"
+                data-gallery-alt="나만의 갤러리 사진 9"
+                data-gallery-caption="나의 꿈과 함께"
+                aria-label="갤러리 사진 9 크게 보기"
+              >
+                <img
+                  src="./images/gallery/KakaoTalk_Photo_2026-03-18-22-21-06.jpeg"
+                  alt="나만의 갤러리 사진 9"
+                  loading="lazy"
+                />
+              </button>
+            </figure>
+          </div>
+
+          <p class="gallery-note reveal-item">사진을 누르면 원본 비율에 가깝게 조금 더 크게 볼 수 있습니다.</p>
+        </div>
+      </section>
+
+      <section class="floating-stage floating-stage-static" id="perfume" aria-labelledby="perfume-title">
+        <div class="section-block floating-card">
+          <div class="section-head reveal-item">
+            <div>
+              <p class="section-kicker">Favorite Perfumes</p>
+              <h2 class="section-title" id="perfume-title">내가 좋아하는 향수</h2>
+            </div>
+            <p class="section-desc">자주 시향하고 다시 떠올리게 되는 향 두 가지입니다.</p>
+          </div>
+
+          <div class="perfume-grid">
+            <article class="perfume-card reveal-item">
+              <a
+                class="perfume-image-wrap perfume-image-link"
+                href="https://www.fragrantica.com/perfume/Dior/Gris-Dior-48387.html"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <img src="./images/GrisDior.jpg" alt="디올 그리 디올 향수 이미지" />
+              </a>
+              <div class="perfume-body">
+                <h3>Gris Dior</h3>
+                <p>차분한 무드가 필요할 때 가장 먼저 떠오르는 향수입니다.</p>
+                <a
+                  class="perfume-link"
+                  href="https://www.fragrantica.com/perfume/Dior/Gris-Dior-48387.html"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  Fragrantica 보기
+                </a>
+              </div>
+            </article>
+
+            <article class="perfume-card reveal-item">
+              <a
+                class="perfume-image-wrap perfume-image-link"
+                href="https://www.fragrantica.com/perfume/Dior/Jasmin-Des-Anges-48383.html"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <img src="./images/JasminDesAnges.jpg" alt="디올 쟈스민 데 장쥬 향수 이미지" />
+              </a>
+              <div class="perfume-body">
+                <h3>Jasmin des Anges</h3>
+                <p>조금 더 화사하고 부드러운 분위기를 느끼고 싶을 때 찾게 되는 향수입니다.</p>
+                <a
+                  class="perfume-link"
+                  href="https://www.fragrantica.com/perfume/Dior/Jasmin-Des-Anges-48383.html"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  Fragrantica 보기
+                </a>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="floating-stage floating-stage-static" id="playlist" aria-labelledby="playlist-title">
+        <div class="section-block floating-card">
+          <div class="section-head reveal-item">
+            <div>
+              <p class="section-kicker">My Playlist</p>
+              <h2 class="section-title" id="playlist-title">나의 플레이리스트</h2>
+            </div>
+            <p class="section-desc">자주 반복해서 듣는 곡들을 담아 둔 스포티파이 플레이리스트입니다.</p>
+          </div>
+
+          <article class="playlist-panel reveal-item">
+            <div class="playlist-copy">
+              <p class="playlist-label">Spotify Playlist</p>
+              <h3>StarK Daily Rotation</h3>
+              <p>
+                이동할 때나 집중할 때 자주 틀어 두는 곡들을 모아 둔 플리입니다. 사이트 안에서 바로 재생할 수
+                있고, 원하면 Spotify 앱에서도 이어서 들을 수 있습니다.
+              </p>
+              <a
+                class="perfume-link"
+                href="https://open.spotify.com/playlist/1Udb3DpNyOYzsGrkLyDQ5L?si=58bced976d394e59"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Spotify에서 열기
+              </a>
+            </div>
+
+            <div class="playlist-embed-wrap">
+              <iframe
+                src="https://open.spotify.com/embed/playlist/1Udb3DpNyOYzsGrkLyDQ5L?utm_source=generator"
+                title="스타크의 스포티파이 플레이리스트"
+                loading="lazy"
+                allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+              ></iframe>
+            </div>
           </article>
         </div>
       </section>
 
+      <section class="floating-stage" id="works" aria-labelledby="works-title">
+        <div class="section-block floating-card">
+          <div class="section-head reveal-item">
+            <div>
+              <p class="section-kicker">Life Works</p>
+              <h2 class="section-title" id="works-title">나를 울린 인생 작품</h2>
+            </div>
+            <p class="section-desc">오래 남아서 자꾸 다시 꺼내 보게 되는 작품 두 가지입니다.</p>
+          </div>
+
+          <ol class="works-list">
+            <li>
+              <article class="work-card reveal-item">
+                <div class="work-thumb">
+                  <img src="./images/IRON_MAN.JPG" alt="영화 아이언맨 포스터 이미지" />
+                </div>
+                <div class="work-body">
+                  <span class="work-rank">01</span>
+                  <div>
+                    <h3>아이언맨</h3>
+                    <p class="work-meta">인생 영화</p>
+                  </div>
+                  <p>
+                    토니 스타크가 자기 확신과 책임감을 동시에 배워 가는 과정이 오래 남는 작품입니다. <br/>
+                    유머와 카리스마, 그리고 성장 서사가 모두 들어 있어서 여러 번 다시 보게 됩니다.
+                  </p>
+                  <div class="work-media" id="works-video">
+                    <iframe
+                      src="https://www.youtube.com/embed/a6rBGQMXc90"
+                      title="영화 아이언맨 예고편"
+                      loading="lazy"
+                      referrerpolicy="strict-origin-when-cross-origin"
+                      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                      allowfullscreen
+                    ></iframe>
+                  </div>
+                </div>
+              </article>
+            </li>
+            <li>
+              <article class="work-card reveal-item">
+                <div class="work-thumb">
+                  <img src="./images/SPIDER_MAN.jpeg" alt="영화 어메이징 스파이더맨 2 포스터 이미지" />
+                </div>
+                <div class="work-body">
+                  <span class="work-rank">02</span>
+                  <div>
+                    <h3>어메이징 스파이더맨 2</h3>
+                    <p class="work-meta">인생 영화</p>
+                  </div>
+                  <p>
+                    피터 파커의 청춘과 책임감, 사랑과 상실이 한꺼번에 밀려오는 작품이라 유독 오래 남습니다.
+                    <br/>저는 이 영화를 통해 사랑과 연애 모두를 배웠습니다 ㅎㅎ
+                  </p>
+                  <div class="work-media">
+                    <iframe
+                      src="https://www.youtube.com/embed/f11ZLEpwCZM"
+                      title="영화 어메이징 스파이더맨 2 예고편"
+                      loading="lazy"
+                      referrerpolicy="strict-origin-when-cross-origin"
+                      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                      allowfullscreen
+                    ></iframe>
+                  </div>
+                </div>
+              </article>
+            </li>
+          </ol>
+        </div>
+      </section>
+
+      <section class="floating-stage floating-stage-til" id="til" aria-labelledby="til-title">
+        <div class="section-block floating-card">
+          <div class="section-head reveal-item">
+            <div>
+              <p class="section-kicker">Today I Learned</p>
+              <h2 class="section-title" id="til-title">TIL</h2>
+            </div>
+            <p class="section-desc">오늘 새롭게 배운 내용을 날짜, 주제, 내용으로 남기는 공간입니다.</p>
+          </div>
+
+          <div class="til-panel">
+            <form class="til-form reveal-item" id="til-form">
+              <div class="form-group">
+                <label for="til-date">날짜</label>
+                <input type="date" id="til-date" name="date" required />
+              </div>
+              <div class="form-group">
+                <label for="til-title-input">학습 주제</label>
+                <input
+                  type="text"
+                  id="til-title-input"
+                  name="title"
+                  placeholder="예: CSS Grid로 3열 갤러리 만들기"
+                  required
+                />
+              </div>
+              <div class="form-group">
+                <label for="til-content">학습 내용</label>
+                <textarea
+                  id="til-content"
+                  name="content"
+                  placeholder="오늘 이해한 개념을 한두 문장으로 정리해 보세요."
+                  required
+                ></textarea>
+              </div>
+              <div class="form-actions">
+                <button type="submit">등록</button>
+                <button type="reset">초기화</button>
+              </div>
+            </form>
+
+            <div class="til-list" id="til-list">
+              <p class="til-empty reveal-item" id="til-empty">아직 등록된 TIL이 없습니다. 오늘 배운 내용을 첫 번째로 남겨 보세요.</p>
+            </div>
+          </div>
+        </div>
+      </section>
     </main>
 
-    <footer>
-      <p>&copy; My Page</p>
+    <div class="gallery-lightbox" id="gallery-lightbox" hidden>
+      <button class="gallery-lightbox-backdrop" type="button" aria-label="확대된 갤러리 닫기" data-gallery-close></button>
+      <div
+        class="gallery-lightbox-dialog"
+        id="gallery-lightbox-dialog"
+        role="dialog"
+        aria-modal="true"
+        aria-labelledby="gallery-lightbox-caption"
+      >
+        <button class="gallery-lightbox-close" type="button" aria-label="확대 이미지 닫기" data-gallery-close>닫기</button>
+        <div class="gallery-lightbox-frame">
+          <img id="gallery-lightbox-image" src="" alt="" />
+        </div>
+        <p class="gallery-lightbox-caption" id="gallery-lightbox-caption"></p>
+      </div>
+    </div>
+
+    <footer class="site-footer">
+      <div class="footer-inner">
+        <p>&copy; 2026 <span class="nickname-mark">스타크</span>. Every day, I learn a little more.</p>
+        <a href="#top">맨 위로</a>
+      </div>
     </footer>
   </body>
 </html>
